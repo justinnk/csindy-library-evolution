@@ -40,15 +40,19 @@ You should now have a virtual environment with all the dependencies and the modu
 0. Navigate to the source directory: `cd src`
 1. Generate the datasets: `python gen_data.py`.
 2. Navigate to the experiments subfolder: `cd experiments`
-3. Run the experiments: `python experiment_definitions.py`. This will run the experiments one after the other and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`.
-4. Plot the results: `python gen_paper_plots.py`
+3. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`.
+4. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. 
+5. Plot the results: `python gen_paper_plots.py`
  
 > **Note:** The genetic algorithm is a stochastic optimization procedure. Hence, the results, especially for the concrete models shown for Wnt might not exactly coincide with those shown in the paper.
 
 ## :page_facing_up: Cite
 
 ```
-Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering Biochemical Reaction Models by Evolving Libraries", 2024. To appear in proceedings of the 22nd International Conference on Computational Methods in Systems Biology, CMSB 2024.
+Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering 
+Biochemical Reaction Models by Evolving Libraries", 2024. To appear in 
+proceedings of the 22nd International Conference on Computational Methods
+in Systems Biology, CMSB 2024.
 ```
 
 ## :file_folder: Overview of Contents
