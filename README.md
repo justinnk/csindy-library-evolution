@@ -6,13 +6,13 @@ Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolvin
 
 ### Required Software
 
-- Linux; tested on Fedora 38 Workstation.
+- Linux operating system; tested on Fedora 38 Workstation and Ubuntu 22.04.4 LTS.
   - Should generally also work on Windows but some adaptations may be required
-- Python; tested on version 3.11.9
+- Python; tested on version 3.11.9 (Fedora) and 3.10.12 (Ubuntu)
 - The dependencies listed in `requirements.txt`
   - can be installed automatically, see the next section
 
-### Installation
+### Installation Guide
 (for Linux)
 
 1. Clone the repository:
@@ -26,26 +26,28 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-3. (locally) install the evolib python package in live mode
+3. (locally) install the evolib python package in editable mode
 ```
 cd src
 pip install -e .
 ```
-(if this fails, you may need to start again from step 1, but this time update setuptools in step 2 with `pip install --upgrade setuptools`)
+(if this fails, you may need to start over from step 1, but this time update `setuptools` in step 2 with `pip install --upgrade setuptools`)
 
-You should now have a virtual environment with all the dependencies and the module `evolib` (this repository) installed.
+You should now have a virtual environment stored in the folder `.venv` with all the dependencies and the module `evolib` (this repository) installed.
 
 ## :bar_chart: Reproduce Results
 
 0. Navigate to the source directory: `cd src`
 1. Generate the datasets: `python gen_data.py`.
-2. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`.
+2. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`. The default settings assume a machine with at least 10 cpu cores. This can be adjusted for each experiment by changing the `parallel_macroreps` parameter.
 3. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. You can use `ls experiment_results/*/*` in the `src` directory to get a good overview.
 4. Plot the results: `python gen_paper_plots.py`
+
+The plots from the paper (and some additional plots) should now be placed in the `figures` folder.
  
 > **Note:** The genetic algorithm is a stochastic optimization procedure. Hence, the results, especially for the concrete models shown for Wnt might not exactly coincide with those shown in the paper. However, they should follow a similar trend.
 
-> **Note:** In step 2, there may be some errors from LSODA regarding a failiure of integration. This is expected.
+> **Note:** In step 2, there may be some errors from LSODA regarding a failiure of integration. This is expected for the csindy/Wnt experiments.
 > If this stops the execution of further experiments, comment out the experiments already finished (you can easily check this with something like `ls experiment_results/*/*`) in `run_experiments.py` and run the script again.
 > This will continue the experiments where they were left off.
 > Generally, it is recommended to store the standard output in a file for later analysis of where a possible failure may have been using e.g. `(unbuffer python experiments/run_experiments.py 2>&1) | tee experiment_log.txt`.
