@@ -1,3 +1,6 @@
 gp_loss.csv
 data/*.csv
 *model_data.csv
+figures/*.pdf
+experiment_results/**/*
+!experiment_results/.gitkeep

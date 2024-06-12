@@ -26,7 +26,7 @@ SOFTWARE.
 
 
 if __name__ == "__main__":
-  from evolib.experiments.experiment_definitions import *
+  from evolib.experiments.run_experiments import *
   from evolib.experiments.model_generation_experiment import EXPERIMENTS_BASEPATH
   from glob import glob
   import os
@@ -38,30 +38,30 @@ if __name__ == "__main__":
   FIGURES = "figures"
   DATES = dict(
     sir=dict(
-      evolib="2024-04-28T20_57",
-      csindy="2024-04-28T20_57",
-      rs="2024-04-28T20_57",
+      evolib="2024-06-10T18_27",
+      csindy="2024-06-10T18_28",
+      rs="2024-06-10T18_28",
     ),
     predatorprey=dict(
-      evolib="2024-05-05T09_47",#"2024-04-28T20_50",
-      csindy="2024-04-28T20_50",
-      rs="2024-04-28T20_50",
+      evolib="2024-06-10T18_28",
+      csindy="2024-06-10T18_28",
+      rs="2024-06-10T18_28",
     ),
     wnt=dict(
-      evolib="2024-04-28T21_02",
-      csindy="2024-05-02T10_52",
-      rs="2024-04-30T10_47",
+      evolib="2024-06-10T18_28",
+      csindy="2024-06-11T08_40",
+      rs="2024-06-11T00_23",
     ),
     wnt_ext=dict(
-      evolib="2024-05-02T23_49",#"2024-04-28T20_30",
-      csindy="2024-04-30T17_45",
-      rs="2024-05-05T00_29"#"2024-04-29T18_49",
+      evolib="2024-06-11T09_36",
+      csindy="2024-06-11T19_31",
+      rs="2024-06-11T14_36"
     ),
     wnt_constrained=dict(
-      evolib="2024-05-01T10_06",
+      evolib="2024-06-11T20_53",
     ),
     wnt_ext_constrained=dict(
-      evolib="2024-05-02T15_16",#"2024-05-01T13_55",
+      evolib="2024-06-12T02_52",
     )
   )
 

@@ -63,8 +63,6 @@ class ModelGenerationExperiment:
     with open(os.path.join(self.experiment_path, "hyperparameters.py"), "w") as file:
       file.write("""
 from evolib.reaction import Reaction
-from evolib.experiments.sindy_experiment import SindyExperiment
-from evolib.experiments.coupled_ensemble_sindy_experiment import CoupledESindyExperiment
 from evolib.experiments.coupled_sindy_experiment import CoupledSindyExperiment
 from evolib.experiments.evolving_libraries_experiment import EvolvingLibrariesExperiment
 from evolib.experiments.random_search_experiment import RandomSearchExperiment

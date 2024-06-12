@@ -39,12 +39,16 @@ You should now have a virtual environment with all the dependencies and the modu
 
 0. Navigate to the source directory: `cd src`
 1. Generate the datasets: `python gen_data.py`.
-2. Navigate to the experiments subfolder: `cd experiments`
-3. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`.
-4. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. 
-5. Plot the results: `python gen_paper_plots.py`
+2. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`.
+3. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. You can use `ls experiment_results/*/*` in the `src` directory to get a good overview.
+4. Plot the results: `python gen_paper_plots.py`
  
-> **Note:** The genetic algorithm is a stochastic optimization procedure. Hence, the results, especially for the concrete models shown for Wnt might not exactly coincide with those shown in the paper.
+> **Note:** The genetic algorithm is a stochastic optimization procedure. Hence, the results, especially for the concrete models shown for Wnt might not exactly coincide with those shown in the paper. However, they should follow a similar trend.
+
+> **Note:** In step 2, there may be some errors from LSODA regarding a failiure of integration. This is expected.
+> If this stops the execution of further experiments, comment out the experiments already finished (you can easily check this with something like `ls experiment_results/*/*`) in `run_experiments.py` and run the script again.
+> This will continue the experiments where they were left off.
+> Generally, it is recommended to store the standard output in a file for later analysis of where a possible failure may have been using e.g. `(unbuffer python experiments/run_experiments.py 2>&1) | tee experiment_log.txt`.
 
 ## :page_facing_up: Cite
 
