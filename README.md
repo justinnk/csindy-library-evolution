@@ -52,7 +52,7 @@ You should now have a virtual environment with all the dependencies and the modu
 
 ## :file_folder: Overview of Contents
 
-The following table provides an overview over the contents of the `src/` directory.
+The following table provides an overview over the contents of the `src/` directory. At the top of each file, there is also a brief explanation regarding its purpose.
 
 | Folder/file              | Content/Purpose                                                                     |
 | ------:                  | :--------                                                                           |
