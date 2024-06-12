@@ -1,6 +1,6 @@
-# csindy-library-evolution
+# Evolving Libraries (evolib)
  
-Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolving Libraries" to appear at the CMSB'24
+Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolving Libraries" to appear at the CMSB'24.
 
 ## :cd: Setup
 
@@ -50,15 +50,6 @@ You should now have a virtual environment with all the dependencies and the modu
 > This will continue the experiments where they were left off.
 > Generally, it is recommended to store the standard output in a file for later analysis of where a possible failure may have been using e.g. `(unbuffer python experiments/run_experiments.py 2>&1) | tee experiment_log.txt`.
 
-## :page_facing_up: Cite
-
-```
-Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering 
-Biochemical Reaction Models by Evolving Libraries", 2024. To appear in 
-proceedings of the 22nd International Conference on Computational Methods
-in Systems Biology, CMSB 2024.
-```
-
 ## :file_folder: Overview of Contents
 
 The following table provides an overview over the contents of the `src/` directory.
@@ -77,3 +68,17 @@ The following table provides an overview over the contents of the `src/` directo
 | `experiments/*`          | Definitions of the experiments and plotting scripts run for the paper.              |
 | `experiment_results/`    | Output directory for experimental data (empty by default).                          |
 | `data/`                  | Output directory for synthetic reference data (empty by default).                   |
+| `figures/`               | Output directory for figures.                                                       |
+
+## :balance_scale: License
+
+This project is liecensed under the MIT License contained in `LICENSE`, unless indicated otherwise at the top of a file.
+
+## :page_facing_up: Cite
+
+```
+Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering 
+Biochemical Reaction Models by Evolving Libraries", 2024. To appear in 
+proceedings of the 22nd International Conference on Computational Methods
+in Systems Biology, CMSB 2024.
+```
