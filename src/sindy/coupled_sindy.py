@@ -6,7 +6,7 @@ actions to fit systems of ordinary differential equations to agent-based models:
 machine learning approach. Numerical Algorithms (1 2024). https://doi.org/10.
 1007/s11075-023-01737-0
 
-The Sparse Identification of Non-linear Dynamics (SINDy) was proposed in:
+The underlying Sparse Identification of Non-linear Dynamics (SINDy) was proposed in:
 
 [2] Brunton, S.L., Proctor, J.L., Kutz, J.N.: Discovering governing equations from
 data by sparse identification of nonlinear dynamical systems. Proceedings of the
@@ -14,10 +14,11 @@ National Academy of Sciences 113, 3932–3937 (4 2016). https://doi.org/10.1073/
 pnas.1517384113
 
 
+License for the below implementation:
+
 MIT License
 
-Copyright (c) 2024 Justin Kreikemeyer; The approach itself is (c) 2024 by the
-authors of [1].
+Copyright (c) 2024 Justin Kreikemeyer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -189,7 +190,7 @@ if __name__ == "__main__":
 
   gt_model = sir # <--- change this...
   ref_data_path = "data/sir_100.csv" # <--- ...and this
-  library = library_for(gt_model, ref_data_path, 2, 2, verbose=True)
+  library = library_for(gt_model, ref_data_path, 2, 3, verbose=True)
 
   method = "nnls"
   res, model = optimize_coupled_sindy(library, method, verbose=True)
