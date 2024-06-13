@@ -16,18 +16,20 @@ Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolvin
 (for Linux)
 
 1. Clone the repository:
-```
+```shell
 git clone <url>
 ```
 2. Create a virtual environment and install the dependencies
-```
-python -m venv .venv
+```shell
+# depending on your linux distribution, you
+# may use either the "python3" or "python"
+python3 -m venv .venv                                    
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 3. (locally) install the evolib python package in editable mode
-```
+```shell
 cd src
 pip install -e .
 ```
@@ -37,9 +39,13 @@ You should now have a virtual environment stored in the folder `.venv` with all 
 
 ## :bar_chart: Reproduce Results
 
+These are the steps to reproduce the figures from the paper.
+The steps assume that you are inside the virtual environment created in the installation guide above.
+Running all experiments may take around 35h, depending on your hardware.
+
 0. Navigate to the source directory: `cd src`
-1. Generate the datasets: `python gen_data.py`.
-2. Run the experiments: `python run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`. The default settings assume a machine with at least 10 cpu cores. This can be adjusted for each experiment by changing the `parallel_macroreps` parameter.
+1. Generate the datasets: `python experiments/gen_data.py`.
+2. Run the experiments: `python experiments/run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`. The default settings assume a machine with at least 10 cpu cores. This can be adjusted for each experiment by changing the `parallel_macroreps` parameter.
 3. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. You can use `ls experiment_results/*/*` in the `src` directory to get a good overview.
 4. Plot the results: `python gen_paper_plots.py`
 
@@ -74,7 +80,7 @@ The following table provides an overview over the contents of the `src/` directo
 
 ## :balance_scale: License
 
-This project is liecensed under the MIT License contained in `LICENSE`, unless indicated otherwise at the top of a file.
+This project is licensed under the MIT License contained in `LICENSE`, unless indicated otherwise at the top of a file.
 
 ## :page_facing_up: Cite
 
