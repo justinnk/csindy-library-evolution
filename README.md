@@ -22,7 +22,7 @@ git clone <url>
 2. Create a virtual environment and install the dependencies
 ```shell
 # depending on your linux distribution, you
-# may use either the "python3" or "python"
+# may use either "python3" or "python"
 python3 -m venv .venv                                    
 source .venv/bin/activate
 pip install --upgrade pip
@@ -87,6 +87,6 @@ This project is licensed under the MIT License contained in `LICENSE`, unless in
 ```
 Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering 
 Biochemical Reaction Models by Evolving Libraries", 2024. To appear in 
-proceedings of the 22nd International Conference on Computational Methods
+Proceedings of the 22nd International Conference on Computational Methods
 in Systems Biology, CMSB 2024.
 ```
