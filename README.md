@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11654440.svg)](https://doi.org/10.5281/zenodo.11654440)
 # Evolving Libraries (evolib)
  
-Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolving Libraries" to appear at the CMSB'24.
+Code artifacts for the paper "Discovering Biochemical Reaction Models by Evolving Libraries" presented at the CMSB'24.
 
 ## :cd: Setup
 
