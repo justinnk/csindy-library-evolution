@@ -86,8 +86,8 @@ This project is licensed under the MIT License contained in `LICENSE`, unless in
 ## :page_facing_up: Cite
 
 ```
-Justin N. Kreikemeyer, Kevin Burrage, Adelinde M. Uhrmacher. "Discovering 
-Biochemical Reaction Models by Evolving Libraries", 2024. To appear in 
-Proceedings of the 22nd International Conference on Computational Methods
-in Systems Biology, CMSB 2024.
+Kreikemeyer, J.N., Burrage, K., Uhrmacher, A.M. (2024). Discovering Biochemical Reaction Models by Evolving Libraries.
+In: Gori, R., Milazzo, P., Tribastone, M. (eds) Computational Methods in Systems Biology. CMSB 2024.
+Lecture Notes in Computer Science, vol 14971. Springer, Cham.
+https://doi.org/10.1007/978-3-031-71671-3_10
 ```
