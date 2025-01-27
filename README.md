@@ -45,7 +45,7 @@ The steps assume that you are inside the virtual environment created in the inst
 Running all experiments may take around 35h, depending on your hardware.
 
 0. Navigate to the source directory: `cd src`
-1. Generate the datasets: `python experiments/gen_data.py`.
+1. Generate the datasets: `python gen_data.py`.
 2. Run the experiments: `python experiments/run_experiments.py`. This will run the experiments one after another and store the data in `src/experiment_results/<method>/<model>/<timestamp>/`. The default settings assume a machine with at least 10 cpu cores. This can be adjusted for each experiment by changing the `parallel_macroreps` parameter.
 3. Open the file `gen_paper_plots.py` and fill in the correct folder names (timestamps) at the top. You can use `ls experiment_results/*/*` in the `src` directory to get a good overview.
 4. Plot the results: `python gen_paper_plots.py`
